@@ -102,4 +102,31 @@ test_error()
 # Final message the student will see upon completing the exercise
 success_msg("Good work!")
 ```
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
+##Regular expressions jargon!
 
+Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *.^$?+()[]{}*
+
+**Which of the following regex contains at least a metacharacter?**
+
+*** =instructions
+- Hello, my name is Peter Parker!
+- What is your name?
+- I don't have time for your foolishness: 
+- Be my guest!
+*** =hint
+Have a look at heading of this exercise and observe that it refers to a specific file in this list?
+*** =sct
+```{r}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# testwhat R package
+
+msg_bad <- "there is no metacharacter in this regex"
+msg_success <- "Exactly! the question mark ? is a metacharacter"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad,msg_bad)) 
+```
