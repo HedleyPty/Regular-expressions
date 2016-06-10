@@ -33,59 +33,97 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad))
 ```
 
 --- type:nomalExercise lang:r xp:50 skills:1 key:452b676422
-##Text in code
+##Text and string/character variables
+
+In the previous exercise we learned that regular expression can be used in *string* or so called in R *character* variables. However; we need to see the structucture of this character to understand how to select the best strategy for using *regex*
+
 *** =instructions
-As you know, not only flat text store text. It can be stored in variables. Complete the R script to evaluate the date
+- load the movies database from http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv using the build in read.csv function to the movies dataframe
+- Observe the first 6 observations of the title variable looks like using the function head
+- Observe the first 15 observations of the title variable looks like using the function head
+- After reflecting of the structure of the TRUE after the line
+
+
+*** =hint
+- Please run the code shown in the item
+- Please run the code shown in the item
+- Please run the code shown in the item
+- Please run the code shown in the item
+
 
 *** =sample_code
 ```{r}
-# movie_selection is available in your workspace
 
-# Show the first five observations of the variable Title from movie_selection: use head(movie_selection$Title)
+# load the movies database from http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv using the build in read.csv function to the movies dataframe: movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
+# Use head(movies$Title) to observe the first 6 observations in the title variable from the movie dataframe
 
-# After you run the line above write TRUE
+# Use head(movies$Title, 15) to observe the first 15 observations in the title variable from the movie dataframe
 
-
-```
-*** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
-
-*** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+# When you have reflected about the structure of the data please run TRUE
 
 
 ```
+
 *** =solution
 ```{r}
-# movie_selection is available in your workspace
+# load the movies database from http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv using the build in read.csv function to the movies dataframe: movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
-# Show the first five observations of the variable Title from movie_selection: use head(movie_selection$Title)
-head(movie_selection$Title)
+# Use head(movies$Title) to observe the first 6 observations in the title variable from the movie dataframe
+head(movies$Title)
 
-# After you run the line above write TRUE
+# Use head(movies$Title, 15) to observe the first 15 observations in the title variable from the movie dataframe
+head(movies$Title, 15)
+
+# When you have reflected about the structure of the data please run TRUE
 TRUE
 
 ```
 
 *** =sct
 ```{r}
+test_object("movies")
+test_function("head", args = "object",
+              not_called_msg = "You didn't call `str()`!",
+              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
+test_function("str", args = c("object", 15),
+              not_called_msg = "You didn't call `str()`!",
+              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
+
+
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
-# testwhat R package
+# testwhat R package. Documentation can also be found at github.com/datacamp/testwhat/wiki
 
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
+# Test whether the function str is called with the correct argument, object
+# If it is not called, print something informative
+# If it is called, but called incorrectly, print something else
+test_function("str", args = "object",
+              not_called_msg = "You didn't call `str()`!",
+              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
 
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad)) 
+# Test the object, good_movies
+# Notice that we didn't define any feedback here, this will cause automatically 
+# generated feedback to be given to the student in case of an incorrect submission
+#test_object("good_movies")
+
+# Test whether the student correctly used plot()
+# Again, we use the automatically generated feedback here
+# test_function("plot", args = "x")
+# test_function("plot", args = "y")
+# test_function("plot", args = "col")
+
+# Alternativeley, you can use test_function() like this
+# test_function("plot", args = c("x", "y", "col"))
+
+# It's always smart to include the following line of code at the end of your SCTs
+# It will check whether executing the student's code resulted in an error, 
+# and if so, will cause the exercise to fail
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("Good work!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:7ea2125df4
