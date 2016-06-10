@@ -57,11 +57,14 @@ In the previous exercise we learned that regular expression can be used in *stri
 # Uncomment the line below
 # movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
+# Store the title variable from the movie dataframe in titles vector, uncomment the line below
+#titles<-head(movies$title)
+
 # Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
-#head(movies$title)
+#head(titles)
 
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
-#head(movies$title)
+#head(titles, 15)
 
 # When you have reflected about the structure of the data please run TRUE
 
@@ -73,11 +76,14 @@ In the previous exercise we learned that regular expression can be used in *stri
 # Uncomment the line below
 movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
+# Store the title variable from the movie dataframe in titles vector, uncomment the line below
+titles<-head(movies$title)
+
 # Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
-head(movies$title)
+head(titles)
 
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
-head(movies$title, 15)
+head(titles, 15)
 
 # When you have reflected about the structure of the data please run TRUE
 
@@ -85,13 +91,13 @@ head(movies$title, 15)
 
 *** =sct
 ```{r}
-test_object("movies")
-test_function("head", args = 'movies$title',
+test_object("titles")
+test_function("head", args = 'titles',
               not_called_msg = "You didn't call 'head()'!",
-              incorrect_msg = "You didn't call 'head(object = ...)' with the correct argument, 'object'.")
-test_function("head", args = c('movies$title', '15'),
+              incorrect_msg = "Not correct")
+test_function("head", args = c('titles', '15'),
               not_called_msg = "You didn't call 'head()'!",
-              incorrect_msg = "You didn't call 'head(object = ...)' with the correct argument, 'object'.")
+              incorrect_msg = "Not correct")
 
 
 # It's always smart to include the following line of code at the end of your SCTs
