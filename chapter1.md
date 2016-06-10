@@ -97,7 +97,7 @@ test_error()
 test_object("movies")
 test_object("titles")
 
-test_function("head", 'titles', not_called_msg = "Make sure to call the function [`as.character()`](http://www.rdocumentation.org/packages/base/functions/character) to convert `var` to a character.",
+test_function(name="head", args='titles', not_called_msg = "Make sure to call the function [`as.character()`](http://www.rdocumentation.org/packages/base/functions/character) to convert `var` to a character.",
               incorrect_msg = "Have you passed the correct variable to the function [`as.character()`](http://www.rdocumentation.org/packages/base/functions/character)?")   
 
 # It's always smart to include the following line of code at the end of your SCTs
