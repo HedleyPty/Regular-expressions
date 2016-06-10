@@ -1,11 +1,11 @@
 ---
-title       : Why should we use regular expressions? & literal characters
-description : In this chapter I will motivate you to use Regular expressions!
+title       : Metacharacters I
+description : In this chapter I will teach you about metacharacters
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
-##Regular expressions and text
+##Wildcard
 
 Regulars expressions allow us to analyse flat text. But which text? Text we refer to is everywhere, in the code, in webpages, in text data files... it is *almost* everywhere. Well, there are some files that we cannot use regular expressions or *regex*. These are *binary* and *compiled* files. Office documents are *binary* files. 
 **Which of the following files does not have flat text, and cannot be analyzed with Regular expressions?**
