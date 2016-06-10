@@ -55,7 +55,7 @@ In the previous exercise we learned that regular expression can be used in *stri
 ```{r}
 
 # Uncomment the line below
-#dataframe: movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+# movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
 # Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
 #head(movies$title)
@@ -71,7 +71,7 @@ In the previous exercise we learned that regular expression can be used in *stri
 *** =solution
 ```{r}
 # Uncomment the line below
-dataframe: movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
 # Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
 head(movies$title)
