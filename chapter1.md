@@ -31,10 +31,11 @@ msg_success <- "Exactly! Word document files are Office files and they are canno
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad)) 
 ```
+
 --- type:nomalExercise lang:r xp:50 skills:1 key:452b676422
 ##Text in code
-
-As you know, not only flat text store text. Complete the R script 
+*** =instructions
+As you know, not only flat text store text. It can be stored in variables. Complete the R script to evaluate the date
 
 *** =sample_code
 ```{r}
