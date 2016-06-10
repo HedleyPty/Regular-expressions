@@ -50,7 +50,9 @@ In the previous exercise we learned that regular expression can be used in *stri
 - Please run the code shown in the item
 - Please run the code shown in the item
 
-
+*** =pre_exercise_code
+```{r}
+```
 *** =sample_code
 ```{r}
 
@@ -95,7 +97,7 @@ test_object("movies")
 test_object("titles")
 
 test_function("head", 'titles', not_called_msg = "You didn't call 'head()'!",   incorrect_msg = "Not correct")
-test_function("head", c('titles','15'), not_called_msg = "You didn't call 'head()'!",   incorrect_msg = "Not correct")
+test_function("head", c('titles','15'), not_called_msg = "You didn't call `head()`!",   incorrect_msg = "`head()`")
 
 # It's always smart to include the following line of code at the end of your SCTs
 # It will check whether executing the student's code resulted in an error, 
