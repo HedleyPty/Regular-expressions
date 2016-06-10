@@ -38,14 +38,12 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad))
 In the previous exercise we learned that regular expression can be used in *string* or so called in R *character* variables. However; we need to see the structucture of this character to understand how to select the best strategy for using *regex*
 
 *** =instructions
-- load the movies database 
-- Observe the first 6 observations of the title variable looks like using the function head
+- Load the movies database 
 - Observe the first 15 observations of the title variable looks like using the function head
 - After reflecting of the structure of the TRUE after the line
 
 
 *** =hint
-- Please run the code shown in the item
 - Please run the code shown in the item
 - Please run the code shown in the item
 - Please run the code shown in the item
@@ -61,9 +59,6 @@ In the previous exercise we learned that regular expression can be used in *stri
 
 # Store the title variable from the movie dataframe in titles vector, uncomment the line below
 #titles<-movies$title
-
-# Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
-#head(titles)
 
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
 #head(titles, 15)
@@ -81,9 +76,6 @@ movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduct
 # Store the title variable from the movie dataframe in titles vector, uncomment the line below
 titles<-movies$title
 
-# Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
-head(titles)
-
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
 head(titles, 15)
 
@@ -97,7 +89,7 @@ test_error()
 test_object("movies")
 test_object("titles")
 
-test_function(name="head", args='x', not_called_msg = "Make sure to call the function [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) to convert `var` to a character.",
+test_function(name="head", args='x', not_called_msg = "Make sure to call the function [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) show explore the values of `titles`.",
               incorrect_msg = "Have you passed the correct variable to the function [`head()`](hhttp://www.rdocumentation.org/packages/utils/functions/head)?")   
 
 # It's always smart to include the following line of code at the end of your SCTs
