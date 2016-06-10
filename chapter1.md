@@ -32,7 +32,7 @@ msg_success <- "Exactly! Word document files are Office files and they are canno
 test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad)) 
 ```
 
---- type:nomalExercise lang:r xp:50 skills:1 key:452b676422
+--- type:NomalExercise lang:r xp:50 skills:1 key:452b676422
 ##Text and string/character variables
 
 In the previous exercise we learned that regular expression can be used in *string* or so called in R *character* variables. However; we need to see the structucture of this character to understand how to select the best strategy for using *regex*
