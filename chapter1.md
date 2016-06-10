@@ -163,7 +163,7 @@ rm(movies)
 #Replace ____ with the regular expression in order to find out how many movies has the word "Time"
 #Don't change anything else!
 regex <- "____"
-n<-length(grep(regex, titles))
+grep(regex, titles,value=T)
 
 ```
 
@@ -174,7 +174,7 @@ n<-length(grep(regex, titles))
 #Replace ____ with the regular expression in order to find out how many movies has the word "Time"
 #Don't change anything else!
 regex <- "Time"
-n<-length(grep(regex, titles))
+grep(regex, titles,value=T)
 
 ```
 
@@ -182,7 +182,7 @@ n<-length(grep(regex, titles))
 ```{r}
 test_error()
 test_object(regex, eq_condition="equals")
-
+  
 success_msg("Good work!")
 
 ```
