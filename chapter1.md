@@ -105,7 +105,16 @@ success_msg("Good work!")
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
 ##Regular expressions jargon!
 
-Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *.^$?+()[]{}*
+Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *
+- .
+- \
+- ^
+- $
+- ?
+- +
+- ( )
+- [ ]
+- { }
 
 **Which of the following regex contains at least a metacharacter?**
 
