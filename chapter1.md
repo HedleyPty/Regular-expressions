@@ -38,7 +38,7 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad))
 In the previous exercise we learned that regular expression can be used in *string* or so called in R *character* variables. However; we need to see the structucture of this character to understand how to select the best strategy for using *regex*
 
 *** =instructions
-- load the movies database from http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv using the build in read.csv function to the movies dataframe
+- load the movies database 
 - Observe the first 6 observations of the title variable looks like using the function head
 - Observe the first 15 observations of the title variable looks like using the function head
 - After reflecting of the structure of the TRUE after the line
