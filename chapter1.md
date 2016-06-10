@@ -184,6 +184,6 @@ grep(regex, titles,value=T)
 if (regex=="Time")  {
 success_msg("Good work!")
 }else{
-cat("Wrong!")
+test_an_object("regex")
 }
 ```
