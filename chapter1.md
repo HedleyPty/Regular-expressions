@@ -184,7 +184,7 @@ grep(regex, titles,value=T)
 if (regex=="Time")  {
 success_msg("Good work!")
 }else{
-err_msg <- paste('The regex', regex, 'is incorrect')
+err_msg <- paste('The regex `', regex, '` is incorrect', sep="")
 test_an_object("regex", undefined_msg = err_msg)
 }
 ```
