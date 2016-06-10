@@ -86,10 +86,10 @@ head(movies$title, 15)
 *** =sct
 ```{r}
 test_object("movies")
-test_function("head", args = 'object',
+test_function("head", args = 'movies$title',
               not_called_msg = "You didn't call `head()`!",
               incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
-test_function("head", args = c('object', '15'),
+test_function("head", args = c('movies$title', '15'),
               not_called_msg = "You didn't call `head()`!",
               incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
 
@@ -105,17 +105,7 @@ success_msg("Good work!")
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
 ##Regular expressions jargon!
 
-Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *
-- .
-- \
-- ^
-- $
-- ?
-- +
-- ( )
-- [ ]
-- { }
-
+Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: **.  \  ^  $  ?  +  ( )  [ ]  { }**
 **Which of the following regex contains at least a metacharacter?**
 
 *** =instructions
