@@ -161,7 +161,7 @@ rm(movies)
 #The environment is populated with the vector `titles`
 
 #Replace ____ below with the proper regular expression 
-#in order to find out how many movies has the word "Time"
+#in order to find out how many movies has the word "Time" in their title
 #Don't change anything else!
 regex <- "____"
 length(grep(regex, titles,value=T))
@@ -173,7 +173,7 @@ length(grep(regex, titles,value=T))
 #The environment is populated with the vector `titles`
 
 #Replace ____ below with the proper regular expression
-#in order to find out how many movies has the word "Time"
+#in order to find out how many movies are the word "Time" in their title
 #Don't change anything else!
 regex <- "Time"
 length(grep(regex, titles,value=T))
