@@ -184,6 +184,6 @@ grep(regex, titles,value=T)
 if (regex=="Time")  {
 success_msg("Good work!")
 }else{
-test_an_object("regex")
+test_an_object("regex", undefined_msg = "This regex is incorrect!")
 }
 ```
