@@ -97,8 +97,8 @@ test_error()
 test_object("movies")
 test_object("titles")
 
-test_function(name="head", args='titles', not_called_msg = "Make sure to call the function [`as.character()`](http://www.rdocumentation.org/packages/base/functions/character) to convert `var` to a character.",
-              incorrect_msg = "Have you passed the correct variable to the function [`as.character()`](http://www.rdocumentation.org/packages/base/functions/character)?")   
+test_function(name="head", args='x', not_called_msg = "Make sure to call the function [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) to convert `var` to a character.",
+              incorrect_msg = "Have you passed the correct variable to the function [`head()`](hhttp://www.rdocumentation.org/packages/utils/functions/head)?")   
 
 # It's always smart to include the following line of code at the end of your SCTs
 # It will check whether executing the student's code resulted in an error, 
