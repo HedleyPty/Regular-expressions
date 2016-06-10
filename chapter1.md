@@ -137,7 +137,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad,msg_bad))
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b6764ff
 ##Using literals
 
-In a previous exercise we learned the *literal*. In R, the function `grepl` must have at least 2 arguments, the first one is a *regular expression* or *regex* and the second one is a test character vector. It returns a logical vector. The values `TRUE` reveal the items in the character the the regular expression matches in this character vector.
+In a previous exercise we learned the *literal*. In R, the function `grep` must have at least 2 arguments, the first one is a *regular expression* or *regex* and the second one is a test character vector. It returns a numeric vector of the indices of the original vector, where the regex match the string
 
 *** =instructions
 - The environment is populated with a character vector `titles`
@@ -160,7 +160,8 @@ rm(movies)
 
 #The environment is populated with the vector `titles`
 
-#Replace ____ with the regular expression in order to find out how many movies has the word "Time"
+#Replace ____ below with the proper regular expression 
+#in order to find out how many movies has the word "Time"
 #Don't change anything else!
 regex <- "____"
 length(grep(regex, titles,value=T))
@@ -171,7 +172,8 @@ length(grep(regex, titles,value=T))
 ```{r}
 #The environment is populated with the vector `titles`
 
-#Replace ____ with the regular expression in order to find out how many movies has the word "Time"
+#Replace ____ below with the proper regular expression
+#in order to find out how many movies has the word "Time"
 #Don't change anything else!
 regex <- "Time"
 length(grep(regex, titles,value=T))
