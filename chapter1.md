@@ -87,11 +87,11 @@ head(movies$title, 15)
 ```{r}
 test_object("movies")
 test_function("head", args = 'movies$title',
-              not_called_msg = "You didn't call `head()`!",
-              incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
+              not_called_msg = "You didn't call 'head()'!",
+              incorrect_msg = "You didn't call 'head(object = ...)' with the correct argument, 'object'.")
 test_function("head", args = c('movies$title', '15'),
-              not_called_msg = "You didn't call `head()`!",
-              incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
+              not_called_msg = "You didn't call 'head()'!",
+              incorrect_msg = "You didn't call 'head(object = ...)' with the correct argument, 'object'.")
 
 
 # It's always smart to include the following line of code at the end of your SCTs
