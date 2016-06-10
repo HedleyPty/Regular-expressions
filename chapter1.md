@@ -93,7 +93,7 @@ head(titles, 15)
 ```{r}
 test_object("movies")
 test_object("titles")
-test_function("head", args = 'object',
+test_function("head", args = 'titles',
               not_called_msg = "You didn't call 'head()'!",
               incorrect_msg = "Not correct")
 test_function("head", args = c('titles', '15'),
