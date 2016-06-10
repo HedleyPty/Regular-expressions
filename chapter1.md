@@ -91,6 +91,7 @@ head(titles, 15)
 
 *** =sct
 ```{r}
+test_object("movies")
 test_object("titles")
 test_function("head", args = 'object',
               not_called_msg = "You didn't call 'head()'!",
