@@ -109,7 +109,7 @@ success_msg("Good work!")
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
 ##Regular expressions jargon!
 
-Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: **.  \  ^  $  ?  +  ( )  [ ]  { }**
+Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *.  \  ^  $  ?  +  ( )  [ ]  { }*. This ones can change according to the context: *, -*
 **Which of the following regex contains at least a metacharacter?**
 
 *** =instructions
@@ -125,11 +125,63 @@ Have a look at heading of this exercise and observe that it refers to a specific
 # evaluate the student's response. All functions used here are defined in the 
 # testwhat R package
 
-msg_bad <- "there is no metacharacter in this regex"
+msg_bad <- "There is no metacharacter in this regex"
 msg_success <- "Exactly! the question mark ? is a metacharacter"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad,msg_bad)) 
+```
+
+--- type:NormalExercise lang:r xp:50 skills:1 key:452b6764ff
+##Using literals
+
+In a previous exercise we learned the *literal*. In R, the function `grepl` must have at least 2 arguments, the first one is a *regular expression* or *regex* and the second one is a test character vector. It returns a logical vector. The values `TRUE` reveal the items in the character the the regular expression matches in this character vector.
+
+*** =instructions
+- The environment is populated with a character vector `titles`
+- Fill in the blank with the proper *regex*
+
+
+*** =hint
+- Remember the literal values represent themselves
+
+
+*** =pre_exercise_code
+```{r}
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+titles<-movies$title
+rm(movies)
+
+```
+*** =sample_code
+```{r}
+
+#The environment is populated with the vector `titles`
+
+#Replace ____ with the regular expression in order to find out how many movies has the word "Time"
+#Don't change anything else!
+n<-length(grep("_____", titles))
+
+```
+
+*** =solution
+```{r}
+#The environment is populated with the vector `titles`
+
+#Replace ____ with the regular expression in order to find out how many movies has the word "Time"
+#Don't change anything else!
+n<-length(grep("Time", titles))
+
+```
+
+*** =sct
+```{r}
+test_error()
+if(n==5){
+success_msg("Good work!")
+}else{test_function(name="head", args='x', not_called_msg = "This regex is incorrect",
+              incorrect_msg = "Have you passed the correct variable to the function [`head()`](hhttp://www.rdocumentation.org/packages/utils/functions/head)?") 
+}
 ```
