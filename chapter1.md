@@ -150,6 +150,7 @@ In a previous exercise we learned the *literal*. In R, the function `grep` must 
 
 *** =pre_exercise_code
 ```{r}
+library(gtools)
 movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 titles<-movies$title
 rm(movies)
@@ -182,11 +183,13 @@ length(grep(regex, titles,value=T))
 
 *** =sct
 ```{r}
-
-if (regex=="Time")  {
+regex.sln<-function(r){
+if (regex==r)  {
 success_msg("Good work!")
 }else{
 err_msg <- paste('The regex `', regex, '` is incorrect', sep="")
 test_an_object("regex", undefined_msg = err_msg)
-}
+}}
+regex.sln("Time")
+
 ```
