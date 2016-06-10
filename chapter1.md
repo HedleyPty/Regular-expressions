@@ -60,7 +60,7 @@ In the previous exercise we learned that regular expression can be used in *stri
 # movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
 # Store the title variable from the movie dataframe in titles vector, uncomment the line below
-#titles<-head(movies$title)
+#titles<-movies$title
 
 # Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
 #head(titles)
@@ -79,7 +79,7 @@ In the previous exercise we learned that regular expression can be used in *stri
 movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
 # Store the title variable from the movie dataframe in titles vector, uncomment the line below
-titles<-head(movies$title)
+titles<-movies$title
 
 # Observe the first 6 observations in the title variable from the movie dataframe, uncomment the line below
 head(titles)
