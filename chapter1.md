@@ -8,14 +8,27 @@ attachments :
 ##Regular expressions and text
 
 Regulars expressions allow us to analyse flat text. But which text? Text we refer to is everywhere, in the code, in webpages, in text data files... it is *almost* everywhere. Well, there are some files that we cannot use regular expressions or *regex*. These are *binary* and *compiled* files. Office documents are *binary* files. 
-<\br>Which of the following files can have flat text, and be analyzed with Regular expressions?
+**Which of the following files does not have flat text, and cannot be analyzed with Regular expressions?**
 
 *** =instructions
 - Python code file (.py)
 - A web page (.html)
 - A word document (.docx)
 - A style file (.css)
+*** =sct
+```{r}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# testwhat R package
 
+msg_bad <- "That is not correct! you can use regular expression with this type of file"
+msg_success <- "Exactly! Word document files are Office files and they are b."
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad)) 
+```
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:452b676422
 ## A really bad movie
 
