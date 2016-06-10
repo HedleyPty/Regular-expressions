@@ -162,7 +162,8 @@ rm(movies)
 
 #Replace ____ with the regular expression in order to find out how many movies has the word "Time"
 #Don't change anything else!
-n<-length(grep("_____", titles))
+regex <- "____"
+n<-length(grep(regex, titles))
 
 ```
 
@@ -172,19 +173,16 @@ n<-length(grep("_____", titles))
 
 #Replace ____ with the regular expression in order to find out how many movies has the word "Time"
 #Don't change anything else!
-n<-length(grep("Time", titles))
+regex <- "Time"
+n<-length(grep(regex, titles))
 
 ```
 
 *** =sct
 ```{r}
+test_error()
+test_object(regex, eq_condition="equals")
 
-if(n==5){
 success_msg("Good work!")
-}else{
 
-test_function(name="head", args='x', not_called_msg = "This regex is incorrect",
-              incorrect_msg = "Have you passed the correct variable to the function [`head()`](hhttp://www.rdocumentation.org/packages/utils/functions/head)?") 
-test_error("Incorrect regex")
-}
 ```
