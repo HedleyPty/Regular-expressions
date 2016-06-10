@@ -181,9 +181,9 @@ grep(regex, titles,value=T)
 *** =sct
 ```{r}
 
-if (regex=="Time")  
+if (regex=="Time")  {
 success_msg("Good work!")
-else
+}else{
 cat("Wrong!")
-
+}
 ```
