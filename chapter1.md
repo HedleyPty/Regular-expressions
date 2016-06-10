@@ -180,9 +180,10 @@ grep(regex, titles,value=T)
 
 *** =sct
 ```{r}
-test_error()
-test_object(regex, eq_condition="equals")
-  
+
+if (regex=="Time")  
 success_msg("Good work!")
+else
+cat("Wrong!")
 
 ```
