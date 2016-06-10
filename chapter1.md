@@ -182,7 +182,7 @@ n<-length(grep("Time", titles))
 if(n==5){
 success_msg("Good work!")
 }else{
-test_object("n")
+
 test_function(name="head", args='x', not_called_msg = "This regex is incorrect",
               incorrect_msg = "Have you passed the correct variable to the function [`head()`](hhttp://www.rdocumentation.org/packages/utils/functions/head)?") 
 test_error("Incorrect regex")
