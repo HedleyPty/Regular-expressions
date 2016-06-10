@@ -77,7 +77,7 @@ movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduct
 head(movies$title)
 
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
-head(movies$title)
+head(movies$title, 15)
 
 # When you have reflected about the structure of the data please run TRUE
 
@@ -86,10 +86,10 @@ head(movies$title)
 *** =sct
 ```{r}
 test_object("movies")
-test_function("head", args = movies,
+test_function("head", args = 'movies',
               not_called_msg = "You didn't call `head()`!",
               incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
-test_function("head", args = c(movies, 15),
+test_function("head", args = c('movies', '15'),
               not_called_msg = "You didn't call `head()`!",
               incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
 
