@@ -86,10 +86,10 @@ head(movies$title)
 *** =sct
 ```{r}
 test_object("movies")
-test_function("head", args = "object",
+test_function("head", args = movies,
               not_called_msg = "You didn't call `head()`!",
               incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
-test_function("head", args = c("object", 15),
+test_function("head", args = c(movies, 15),
               not_called_msg = "You didn't call `head()`!",
               incorrect_msg = "You didn't call `head(object = ...)` with the correct argument, `object`.")
 
