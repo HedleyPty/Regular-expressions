@@ -10,10 +10,10 @@ attachments :
 Regulars expressions allow us to analyse flat text. But which text? Text we refer to is everywhere, in the code, in webpages, in text data files... it is *almost* everywhere. Well, there are some files that we cannot use regular expressions or *regex*. These are *binary* and *compile* files. Office documents are *binary* files. Which of the following files can have flat text, and be analyzed with Regular expressions?
 
 *** =instructions
-Python\ code\ file\ (.py)
-A web page (.html)
-A word document (.docx)
-A style file (.css)
+- Python\ code\ file\ (.py)
+- A web page (.html)
+- A word document (.docx)
+- A style file (.css)
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:452b676422
 ## A really bad movie
