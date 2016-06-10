@@ -39,8 +39,9 @@ In the previous exercise we learned that regular expression can be used in *stri
 
 *** =instructions
 - Load the movies database 
-- Observe the first 15 observations of the title variable looks like using the function head
-- After reflecting of the structure of the TRUE after the line
+- Create a vector called `title`
+- Observe the first 15 observations of the title vector looks like using the function head
+- After reflecting of the structure character vector click the "Submit Answer" button
 
 
 *** =hint
@@ -54,32 +55,37 @@ In the previous exercise we learned that regular expression can be used in *stri
 *** =sample_code
 ```{r}
 
-# Uncomment the line below
+# Uncomment the line below & click control+R
 # movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
 # Store the title variable from the movie dataframe in titles vector, uncomment the line below
+# Uncomment the line below & click control+R
 #titles<-movies$title
 
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
+# Uncomment the line below & click control+R
 #head(titles, 15)
 
-# When you have reflected about the structure of the data please run TRUE
+# When you have reflected about the structure of the data click "Submit Answer"
 
 
 ```
 
 *** =solution
 ```{r}
-# Uncomment the line below
+# Uncomment the line below & click control+R
 movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
 # Store the title variable from the movie dataframe in titles vector, uncomment the line below
+# Uncomment the line below & click control+R
 titles<-movies$title
 
 # Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
+# Uncomment the line below & click control+R
 head(titles, 15)
 
-# When you have reflected about the structure of the data please run TRUE
+# When you have reflected about the structure of the data click "Submit Answer"
+
 
 ```
 
