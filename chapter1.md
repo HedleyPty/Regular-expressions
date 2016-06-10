@@ -97,7 +97,8 @@ test_error()
 test_object("movies")
 test_object("titles")
 
-test_function("head", 'title', not_called_msg = "You didn't call `head()`!")   
+test_function("head", 'titles', not_called_msg  = "You didn't call `head()`!", 
+incorrect_msg)   
 
 # It's always smart to include the following line of code at the end of your SCTs
 # It will check whether executing the student's code resulted in an error, 
