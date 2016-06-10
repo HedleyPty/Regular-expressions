@@ -15,31 +15,38 @@ Regulars expressions allow us to analyse flat text. But which text? Text we refe
 - A web page (.html)
 - A word document (.docx)
 - A style file (.css)
+*** =hint
+Have a look at heading of this exercise and observe that it refers to a specific file in this list?
 *** =sct
 ```{r}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # testwhat R package
 
-msg_bad <- "That is not correct! you can use regular expression with this type of file"
-msg_success <- "Exactly! Word document files are Office files and they are b."
+msg_bad <- "That is not correct! you can use regular expression with this type of file as it is stated in the heading of this question"
+msg_success <- "Exactly! Word document files are Office files and they are cannot be analyzed with Regex."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad)) 
 ```
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:452b676422
-## A really bad movie
+--- type:nomalExercise lang:r xp:50 skills:1 key:452b676422
+##Text in code
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
+As you know, not only flat text store text. Complete the R script 
 
-*** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
+*** =sample_code
+```{r}
+# movie_selection is available in your workspace
 
+# Show the first five observations of the variable Title from movie_selection: use head(movie_selection$Title)
+
+
+# After you run the line above write TRUE
+
+
+```
 *** =hint
 Have a look at the plot. Which color does the point with the lowest rating have?
 
@@ -49,13 +56,20 @@ Have a look at the plot. Which color does the point with the lowest rating have?
 
 # 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
 # The movies variable will be available in the user's console.
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
 
-# 2. Pre-load packages, so that users don't have to do this manually.
-library(ggplot2)
 
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+```
+*** =solution
+```{r}
+# movie_selection is available in your workspace
+
+# Show the first five observations of the variable Title from movie_selection: use head(movie_selection$Title)
+head(movie_selection$Title)
+
+# After you run the line above write TRUE
+TRUE
+
 ```
 
 *** =sct
