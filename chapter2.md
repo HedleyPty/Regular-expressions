@@ -7,29 +7,25 @@ attachments :
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
 ##Wildcard
 
-Regulars expressions allow us to analyse flat text. But which text? Text we refer to is everywhere, in the code, in webpages, in text data files... it is *almost* everywhere. Well, there are some files that we cannot use regular expressions or *regex*. These are *binary* and *compiled* files. Office documents are *binary* files. 
-**Which of the following files does not have flat text, and cannot be analyzed with Regular expressions?**
+The wildcard **.** represent any character in a regular expression. It means that **.** represents any character in a given position. **Which of the following texts does not match with the regular expression *Hell.*?**
 
 *** =instructions
-- Python code file (.py)
-- A web page (.html)
-- A word document (.docx)
-- A style file (.css)
+- Hell
+- Hell is warm
+- Hello, how are you?
+- I love Hellene
 *** =hint
-Have a look at heading of this exercise and observe that it refers to a specific file in this list?
+Remember the wildcar match any character
 *** =sct
 ```{r}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# testwhat R package
+#
+msg_bad_1 <- "In this instance the wildcard matches with a `space`"
+msg_bad_2 <- "In this instance the wildcard matches with an `o`"
+msg_bad_3 <- "In this instance the wildcard matches with an `e`"
+msg_success <- "Exactly! In this intance, there is no character after Hell, therefore the regex doesn't match"
 
-msg_bad <- "That is not correct! you can use regular expression with this type of file as it is stated in the heading of this question"
-msg_success <- "Exactly! Word document files are Office files and they are cannot be analyzed with Regex."
 
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(correct = 3, feedback_msgs = c(msg_bad,  msg_bad, msg_success, msg_bad)) 
+test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad_1, msg_bad_2, msg_bad_3 )) 
 ```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b676422
