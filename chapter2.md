@@ -132,7 +132,7 @@ rm(movies)
 ```{r}
 #I have loaded a title vector of movie titles
 #It will be needed to answer some questions
-# Complete the ___ with the correct literals in order to answer the questions
+# Complete the ___ with the correct character in order to answer the questions
 # Never use w, D, s or S in any case!
 # Don't do any other change in the script!
 
@@ -159,7 +159,7 @@ length(grep(regex.numbers, titles))
 ```{r}
 #I have loaded a title vector of movie titles
 #It will be needed to answer some questions
-# Complete the ___ with the correct literals in order to answer the questions
+# Complete the ___ with the correct character in order to answer the questions
 # Never use w, D, s or S in any case!
 # Don't do any other change in the script!
 
