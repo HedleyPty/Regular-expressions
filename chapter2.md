@@ -30,7 +30,7 @@ test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad_1, msg_bad_2, msg_ba
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b676422
 ##The escape I from metacharacters to literals: \
-As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or \\. **In R and Java, you need two bashlashes to escape a metacharacter!!**
+As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or \\. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
 
 *** =instructions
 - I have loaded a movie titles vector from the movies database
