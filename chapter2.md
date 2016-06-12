@@ -193,7 +193,8 @@ test_object("regex.numbers")
 success_msg("Good work!")
 ```
 
---- type:NormalExercise lang:r xp:50 skills:1 key:452b6dd422
+--- type:NormalExercise lang:r xp:50 skills:1 key:f41a3eb6e4
+>>>>>>> 574ddf9a7c66d049983a3eb96ac72d8a28f3eb14
 ##Analysing a python file in R
 As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or \\. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
 
