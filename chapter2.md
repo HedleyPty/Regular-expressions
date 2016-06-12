@@ -5,7 +5,7 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
-##Wildcard
+##Wildcard .
 
 The wildcard **.** represent any character in a regular expression. It means that **.** represents any character *that exists* in a given position. **Which of the following texts does not match with the regular expression */Hell./*   ?**
 
@@ -29,15 +29,14 @@ test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad_1, msg_bad_2, msg_ba
 ```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b676422
-##Text and string/character variables
-
-In the previous exercise we learned that regular expression can be used in *string* or so called in R *character* variables. However; we need to see the structucture of this character to understand how to select the best strategy for using *regex*
+##The escape I from metacharacters to literals: \
+As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or *\*. **In R and Java, you need two bashlashes to escape a metacharacter!!**
 
 *** =instructions
-- Load the movies database 
-- Create a vector called `title`
-- Observe the first 15 observations of the title vector looks like using the function head
-- After reflecting of the structure character vector click the "Submit Answer" button
+- I have loaded a movie titles vector from the movies database
+- Use the proper regex to know how many titles do have a dot in their titles? 
+- Use the proper regex to know how many titles do have a question mark in their titles? 
+- Use the proper regex to know how many titles do have a backslash in their titles? 
 
 
 *** =hint
@@ -47,42 +46,39 @@ In the previous exercise we learned that regular expression can be used in *stri
 
 *** =pre_exercise_code
 ```{r}
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+titles <- movies$title
+rm(movies)
 ```
 *** =sample_code
 ```{r}
+#I have loaded a title vector of movie titles
+# Complete the ___ with the correct regex in order to answer the questions
 
-# Uncomment the line below & click control+R
-# movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+#How many movies contains a dot (.) in their titles
+length(grep('___', titles))
 
-# Store the title variable from the movie dataframe in titles vector, uncomment the line below
-# Uncomment the line below & click control+R
-#titles<-movies$title
+#How many movies contains a question mark (?) in their titles
+length(grep('___', titles))
 
-# Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
-# Uncomment the line below & click control+R
-#head(titles, 15)
-
-# When you have reflected about the structure of the data click "Submit Answer"
-
+#How many movies contains a backslash (\) in their titles
+length(grep('___', titles))
 
 ```
 
 *** =solution
 ```{r}
-# Uncomment the line below & click control+R
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+#I have loaded a title vector of movie titles
+# Complete the ___ with the correct regex in order to answer the questions
 
-# Store the title variable from the movie dataframe in titles vector, uncomment the line below
-# Uncomment the line below & click control+R
-titles<-movies$title
+#How many movies contains a dot (.) in their titles
+length(grep('\\.', titles))
 
-# Observe the first 15 observations in the title variable from the movie dataframe, uncomment the line below
-# Uncomment the line below & click control+R
-head(titles, 15)
+#How many movies contains a question mark (?) in their titles
+length(grep('\\?', titles))
 
-# When you have reflected about the structure of the data click "Submit Answer"
-
-
+#How many movies contains a backslash (\) in their titles
+length(grep('\\\\', titles))
 ```
 
 *** =sct
