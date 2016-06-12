@@ -110,13 +110,13 @@ success_msg("Good work!")
 ##Regular expressions jargon!
 
 Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *.  \  ^  $  ?  +  ( )  [ ]  { }*. This ones can change according to the context: *, -*
-**Which of the following regex contains at least a metacharacter?**
+**Which of the following regex contains at least a metacharacter?**  *Notice that by convention, regex are enclosed by //, but R does not allow such symbols*
 
 *** =instructions
-- Hello, my name is Peter Parker!
-- What is your name?
-- I don't have time for your foolishness: 
-- Be my guest!
+- /Hello, my name is Peter Parker!/
+- /What is your name?/
+- /I don't have time for your foolishness:/
+- /Be my guest!/
 *** =hint
 Have a look at heading of this exercise and observe that it refers to a specific file in this list?
 *** =sct
