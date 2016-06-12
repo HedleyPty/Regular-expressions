@@ -160,7 +160,7 @@ length(grep(regex.numbers, titles))
 #I have loaded a title vector of movie titles
 #It will be needed to answer some questions
 # Complete the ___ with the correct literals in order to answer the questions
-# Never use w in any case!
+# Never use w or D in any case!
 # Don't do any other change in the script!
 
 #Complete the following regex with the correct characters!
