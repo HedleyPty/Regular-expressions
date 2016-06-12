@@ -7,7 +7,7 @@ attachments :
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
 ##Wildcard
 
-The wildcard **.** represent any character in a regular expression. It means that **.** represents any character *that exists* in a given position. **Which of the following texts does not match with the regular expression *Hell.*?**
+The wildcard **.** represent any character in a regular expression. It means that **.** represents any character *that exists* in a given position. **Which of the following texts does not match with the regular expression */Hell./*   ?**
 
 *** =instructions
 - Hell
