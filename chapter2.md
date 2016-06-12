@@ -280,6 +280,8 @@ test_object("regex.quest")
 test_object("regex.bl")
 
 success_msg("Good work!")
+```
+
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
 ##Regular expressions jargon!
 
