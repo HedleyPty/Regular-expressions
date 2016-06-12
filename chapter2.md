@@ -15,7 +15,7 @@ The wildcard **.** represent any character in a regular expression. It means tha
 - Hello, how are you?
 - I love Hellene
 *** =hint
-Remember the wildcar match any character
+Remember the wildcard match any character that *exists*
 *** =sct
 ```{r}
 #
