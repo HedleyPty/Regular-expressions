@@ -234,52 +234,27 @@ rm(python.file)
 ```
 *** =sample_code
 ```{r}
-#I have loaded a title vector of movie titles
-# Complete the ___ with the correct regex in order to answer the questions
-# Don't do any other change in the script!
-
-#How many movies contains a dot (.) in their titles
-regex.dot <- '____'
-length(grep(regex.dot, titles))
-
-#How many movies contains a question mark (?) in their titles
-regex.quest <- '____'
-length(grep(regex.quest, titles))
-
-#How many movies contains a backslash (\) in their titles
-regex.bl <- '____'
-length(grep(regex.bl, titles))
+# I have uploaded a file called ""python file.py
+# You can see its contents in R uncommenting the lines below
+# python.file <- readLines("python file.py")
+# python.file
 
 ```
 
 *** =solution
 ```{r}
-#I have loaded a title vector of movie titles
-# Complete the ___ with the correct regex in order to answer the questions
-# Don't do any other change in the script!
-
-#How many movies contains a dot (.) in their titles
-regex.dot <- '\\.'
-length(grep(regex.dot, titles))
-
-#How many movies contains a question mark (?) in their titles
-regex.quest <- '\\?'
-length(grep(regex.quest, titles))
-
-#How many movies contains a backslash (\) in their titles
-regex.bl <- '\\\\'
-length(grep(regex.bl, titles))
+# I have uploaded a file called ""python file.py
+# You can see its contents in R uncommenting the lines below
+# python.file <- readLines("python file.py")
+# python.file
 
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("regex.dot")
-test_object("regex.quest")
-test_object("regex.bl")
+test_object("python.file")
 
-success_msg("Good work!")
 ```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
