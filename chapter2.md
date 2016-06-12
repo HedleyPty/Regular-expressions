@@ -54,15 +54,19 @@ rm(movies)
 ```{r}
 #I have loaded a title vector of movie titles
 # Complete the ___ with the correct regex in order to answer the questions
+# Don't do any other change in the script!
 
 #How many movies contains a dot (.) in their titles
-length(grep('___', titles))
+regex.dot <- '____'
+length(grep(regex.dot, titles))
 
 #How many movies contains a question mark (?) in their titles
-length(grep('___', titles))
+regex.quest <- '____'
+length(grep(regex.quest, titles))
 
 #How many movies contains a backslash (\) in their titles
-length(grep('___', titles))
+regex.bl <- '____'
+length(grep(regex.bl, titles))
 
 ```
 
@@ -70,32 +74,29 @@ length(grep('___', titles))
 ```{r}
 #I have loaded a title vector of movie titles
 # Complete the ___ with the correct regex in order to answer the questions
+# Don't do any other change in the script!
 
 #How many movies contains a dot (.) in their titles
-length(grep('\\.', titles))
+regex.dot <- '\\.'
+length(grep(regex.dot, titles))
 
 #How many movies contains a question mark (?) in their titles
-length(grep('\\?', titles))
+regex.quest <- '\\?'
+length(grep(regex.quest, titles))
 
 #How many movies contains a backslash (\) in their titles
-length(grep('\\\\', titles))
+regex.bl <- '\\\\'
+length(grep(regex.bl, titles))
+
 ```
 
 *** =sct
 ```{r}
 test_error()
-test_object("movies")
-test_object("titles")
+test_object("regex.dot")
+test_object("regex.quest")
+test_object("regex.bl")
 
-test_function(name="head", args='x', not_called_msg = "Make sure to call the function [`head()`](http://www.rdocumentation.org/packages/utils/functions/head) show explore the values of `titles`.",
-              incorrect_msg = "Have you passed the correct variable to the function [`head()`](hhttp://www.rdocumentation.org/packages/utils/functions/head)?")   
-
-# It's always smart to include the following line of code at the end of your SCTs
-# It will check whether executing the student's code resulted in an error, 
-# and if so, will cause the exercise to fail
-
-
-# Final message the student will see upon completing the exercise
 success_msg("Good work!")
 ```
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
