@@ -192,6 +192,93 @@ test_object("regex.numbers")
 
 success_msg("Good work!")
 ```
+
+--- type:NormalExercise lang:r xp:50 skills:1 key:452b676422
+##Analysing a python file in R
+As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or \\. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
+
+*** =instructions
+- I have loaded a movie titles vector from the movies database
+- Use the proper regex to know how many titles do have a dot in their titles? 
+- Use the proper regex to know how many titles do have a question mark in their titles? 
+- Use the proper regex to know how many titles do have a backslash in their titles? 
+
+
+*** =hint
+- Remember 2 things: in R you need a double backslash to escape a metacharacter!!
+
+*** =pre_exercise_code
+```{r}
+python.file <- c( "import math",
+                  "class gameObject:",
+                  "    def __init__(self, pos, radius):",
+                  "        self.pos=pos",
+                  "        self.radius=radius",
+
+                  "def distance(Coord_1,Coord_2):",
+                  '    if len(Coord_1) != len(Coord_2)',
+                  '        return "The length of the vectors is not equal"',
+                  "    else:",
+                  "        l=[(Coord_1[i]-Coord_2[i])**2 for i in range(len(Coord_1))]",
+                  
+                  "        return math.sqrt(sum(l))",
+                  "def collisions(x,y):",
+                  "    Coord_x = x.pos",
+                  "    Coord_y = y.pos",
+                  "    impact = x.radius + y.radius",
+                  '    if distance(Coord_x, Coord_y) <= impact:',
+                  '    return "boom"' ) 
+write.table(python.file, "python file.py",quote=F, col.names=F, row.names=F, sep="\n")
+rm(python.file)
+```
+*** =sample_code
+```{r}
+#I have loaded a title vector of movie titles
+# Complete the ___ with the correct regex in order to answer the questions
+# Don't do any other change in the script!
+
+#How many movies contains a dot (.) in their titles
+regex.dot <- '____'
+length(grep(regex.dot, titles))
+
+#How many movies contains a question mark (?) in their titles
+regex.quest <- '____'
+length(grep(regex.quest, titles))
+
+#How many movies contains a backslash (\) in their titles
+regex.bl <- '____'
+length(grep(regex.bl, titles))
+
+```
+
+*** =solution
+```{r}
+#I have loaded a title vector of movie titles
+# Complete the ___ with the correct regex in order to answer the questions
+# Don't do any other change in the script!
+
+#How many movies contains a dot (.) in their titles
+regex.dot <- '\\.'
+length(grep(regex.dot, titles))
+
+#How many movies contains a question mark (?) in their titles
+regex.quest <- '\\?'
+length(grep(regex.quest, titles))
+
+#How many movies contains a backslash (\) in their titles
+regex.bl <- '\\\\'
+length(grep(regex.bl, titles))
+
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("regex.dot")
+test_object("regex.quest")
+test_object("regex.bl")
+
+success_msg("Good work!")
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
 ##Regular expressions jargon!
 
