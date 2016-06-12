@@ -40,9 +40,7 @@ As I mentioned before the metacharacters have *special meaning*, however what if
 
 
 *** =hint
-- Please run the code shown in the item
-- Please run the code shown in the item
-- Please run the code shown in the item
+- Remember 2 things: in R you need a double backslash to escape a metacharacter!!
 
 *** =pre_exercise_code
 ```{r}
@@ -96,6 +94,101 @@ test_error()
 test_object("regex.dot")
 test_object("regex.quest")
 test_object("regex.bl")
+
+success_msg("Good work!")
+```
+
+--- type:NormalExercise lang:r xp:50 skills:1 key:452b67642c
+##The escape II literals with special meaning: \
+
+As I mentioned before the escape character \\ eliminate the *special meaning* of the metacharacter it modifies. However in the other hand, it gives a special meaning to some literal characters. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
+
+*** =instructions
+- I have loaded a movie titles vector from the movies database
+- You might need to answer some questions
+- Use the following list of literal characters modified by \\ to solve the questions in the excercise:
+- \\d means "any number"
+- \\D means "any character but a number"
+- \\w means "any printable character"
+- \\W means "any non-printable character"
+- \\s means "any white space character"
+- \\S means "any non-white space character"
+- \\b means "word boundary"
+- \\t means "tab"
+- \\n means "next line"
+- Use the proper regex to know how many titles do have a backslash in their titles? 
+
+
+*** =hint
+- Remember 2 things: in R you need a double backslash to escape a metacharacter!!
+
+*** =pre_exercise_code
+```{r}
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv", stringsAsFactors=F)
+titles <- movies$title
+rm(movies)
+```
+*** =sample_code
+```{r}
+#I have loaded a title vector of movie titles
+#It will be needed to answer some questions
+# Complete the ___ with the correct literals in order to answer the questions
+# Never use w in any case!
+# Don't do any other change in the script!
+
+#Complete the following regex with the correct characters!
+regex.1 <- 'Your score is \\__\\__\\__\\__'
+grepl(regex.1, 'Your score is 67.8')
+
+#Complete the following regex with the correct characters!
+regex.2 <- "My name is Gill\\__\\__I am a very proficient computer scientist, don't you think so\\__"
+grepl(regex.2, "My name is Gill.
+I am a very proficient computer scientist, don't you think so?")
+
+#How many movies contains a tab in their titles
+regex.tab <- '____'
+length(grep(regex.tab, titles))
+
+#How many movies contains at least two consecutive numbers in their titles
+regex.numbers <- '____'
+length(grep(regex.numbers, titles))
+
+```
+
+*** =solution
+```{r}
+#I have loaded a title vector of movie titles
+#It will be needed to answer some questions
+# Complete the ___ with the correct literals in order to answer the questions
+# Never use w in any case!
+# Don't do any other change in the script!
+
+#Complete the following regex with the correct characters!
+regex.1 <- 'Your score is \\d\\d\\.\\d'
+grepl(regex.1, 'Your score is 67.8')
+
+#Complete the following regex with the correct characters!
+regex.2 <- "My name is Gill\\.\\nI am a very proficient computer scientist, don't you think so\\?"
+grepl(regex.2, "My name is Gill.
+I am a very proficient computer scientist, don't you think so?")
+
+#How many movies contains a tab in their titles
+regex.tab <- '\\d\\d'
+length(grep(regex.tab, titles))
+
+#How many movies contains at least two consecutive numbers in their titles
+regex.numbers <- '____'
+length(grep(regex.numbers, titles))
+
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("regex.1")
+test_object("regex.2")
+test_object("regex.tab")
+test_object("regex.numbers")
 
 success_msg("Good work!")
 ```
