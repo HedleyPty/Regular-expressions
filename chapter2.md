@@ -192,9 +192,56 @@ test_object("regex.numbers")
 
 success_msg("Good work!")
 ```
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
+##Analyzing a Python file
+
+You can read any kind of code or program using R. I have loaded a Python file. Use the R function *list.files()* to show the file in the working directory. Read the file using the R function 
+*** =pre_exercise_code
+```{r}
+python.file <- c( "import math",
+                  "class gameObject:",
+                  "    def __init__(self, pos, radius):",
+                  "        self.pos=pos",
+                  "        self.radius=radius",
+
+                  "def distance(Coord_1,Coord_2):",
+                  '    if len(Coord_1) != len(Coord_2)',
+                  '        return "The length of the vectors is not equal"',
+                  "    else:",
+                  "        l=[(Coord_1[i]-Coord_2[i])**2 for i in range(len(Coord_1))]",
+                  
+                  "        return math.sqrt(sum(l))",
+                  "def collisions(x,y):",
+                  "    Coord_x = x.pos",
+                  "    Coord_y = y.pos",
+                  "    impact = x.radius + y.radius",
+                  '    if distance(Coord_x, Coord_y) <= impact:',
+                  '    return "boom"' ) 
+write.table(python.file, "python file.py",quote=F, col.names=F, row.names=F, sep="\n")
+rm(python.file)
+```
+
+*** =instructions
+- class
+- Boo
+- pepe
+- I love Hellene
+*** =hint
+Remember the wildcard match any character that *exists*
+*** =sct
+```{r}
+#
+msg_bad_1 <- "In this instance the wildcard matches with a `space`"
+msg_bad_2 <- "In this instance the wildcard matches with an `o`"
+msg_bad_3 <- "In this instance the wildcard matches with an `e`"
+msg_success <- "Exactly! In this intance, there is no character after Hell, therefore the regex doesn't match"
+
+
+test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad_1, msg_bad_2, msg_bad_3 )) 
+```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:f41a3eb6e4
->>>>>>> 574ddf9a7c66d049983a3eb96ac72d8a28f3eb14
+
 ##Analysing a python file in R
 As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or \\. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
 
