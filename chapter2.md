@@ -192,10 +192,10 @@ test_object("regex.numbers")
 
 success_msg("Good work!")
 ```
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cc6e24
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cd6e24
 ##Analyzing a Python file
 
-You can read any kind of code or program using R. I have loaded a Python file. Use the R function *list.files()* to show the file in the working directory. Read the file using the R function 
+You can read any kind of code or program using R. I have loaded a Python file. Use the R function **list.files()** to show the file in the working directory. Read the file using the R function **python <- readLines("python file.py")**. **Which of the following is the regular expression to determine the attributes of a class in in Python?**
 *** =pre_exercise_code
 ```{r}
 python.file <- c( "import math",
@@ -223,21 +223,21 @@ rm(python.file)
 
 *** =instructions
 - class
-- Boo
-- pepe
-- I love Hellene
+- self.
+- self\\\\.
+- self\\.
 *** =hint
 Remember the wildcard match any character that *exists*
 *** =sct
 ```{r}
 #
-msg_bad_1 <- "In this instance the wildcard matches with a `space`"
-msg_bad_2 <- "In this instance the wildcard matches with an `o`"
-msg_bad_3 <- "In this instance the wildcard matches with an `e`"
-msg_success <- "Exactly! In this intance, there is no character after Hell, therefore the regex doesn't match"
+msg_bad_1 <- "`class` makes no sense in this context"
+msg_bad_2 <- "`.` is a wildcard, it matches with anything"
+msg_bad_3 <- "`\\` in R is not the metacharacter for escape"
+msg_success <- "Exactly! This is correct!"
 
 
-test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad_1, msg_bad_2, msg_bad_3 )) 
+test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_bad_3 )) 
 ```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:f41a3eb6e4
