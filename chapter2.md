@@ -192,10 +192,13 @@ test_object("regex.numbers")
 
 success_msg("Good work!")
 ```
+
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cd6e24
+
+
 ##Analyzing a Python file
 
-You can read any kind of code or program using R. I have loaded a Python file. Use the R function **list.files()** to show the file in the working directory. Read the file using the R function **python <- readLines("python file.py")**. **Which of the following is the regular expression to determine the attributes of a class in in Python?**
+You can read any kind of code or program using R. I have loaded a Python file. Use the R function **list.files()** to show the file in the working directory. Read the file using the R function **python <- readLines("python file.py")**. **Which of the following is the regular expression (in R) to determine the attributes of a Python class?**
 *** =pre_exercise_code
 ```{r}
 python.file <- c( "import math",
