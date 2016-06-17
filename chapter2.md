@@ -98,7 +98,7 @@ test_object("regex.bl")
 success_msg("Good work!")
 ```
 
---- type:NormalExercise lang:r xp:50 skills:1 key:452b67642c
+--- type:NormalExercise lang:r xp:150 skills:1 key:452b67642c
 ##The escape II literals with special meaning: \
 
 As I mentioned before the escape character \\ eliminate the *special meaning* of the metacharacter it modifies. However in the other hand, it gives a special meaning to some literal characters. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
@@ -194,11 +194,9 @@ success_msg("Good work!")
 ```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ab57cd6e24
-
-
 ##Analyzing a Python file
 
-You can read any kind of code or program using R. I have loaded a Python file. Use the R function **list.files()** to show the python file in the working directory. Read the file using the R function **python <- readLines("python file.py")**. **Which of the following regular expressions (in R) does determine the attributes of a Python class?**
+You can read any kind of code or program using R. I have loaded a Python file in the working directory. Use the R function **list.files()** to show the python file in the working directory. Read the file using the R function **python <- readLines("python file.py")**. **Which of the following regular expressions (in R) does determine the attributes of a Python class?**
 *** =pre_exercise_code
 ```{r}
 python.file <- c( "import math",
