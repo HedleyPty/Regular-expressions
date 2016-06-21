@@ -173,11 +173,11 @@ grepl(regex.2, "My name is Gill.
 I am a very proficient computer scientist, don't you think so?")
 
 #How many movies contains a tab in their titles
-regex.tab <- '\\d\\d'
+regex.tab <- '\\t'
 length(grep(regex.tab, titles))
 
 #How many movies contains at least two consecutive numbers in their titles
-regex.numbers <- '____'
+regex.numbers <- '\\d\\d'
 length(grep(regex.numbers, titles))
 
 ```
@@ -239,70 +239,6 @@ msg_success <- "Exactly! This is correct!"
 
 
 test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_bad_3 )) 
-```
-
---- type:NormalExercise lang:r xp:50 skills:1 key:f41a3eb6e4
-
-##Analysing a python file in R
-As I mentioned before the metacharacters have *special meaning*, however what if I want to give a *literal sense*, for instance a dot actually means dot, a question mark that really means a question mark. In such case you need to *escape* the metacharacter with the escape metacharacter or \\. **In R and Java, you need two bashlashes or \\\\ to escape a metacharacter!!**
-
-*** =instructions
-- I have loaded a movie titles vector from the movies database
-- Use the proper regex to know how many titles do have a dot in their titles? 
-- Use the proper regex to know how many titles do have a question mark in their titles? 
-- Use the proper regex to know how many titles do have a backslash in their titles? 
-
-
-*** =hint
-- Remember 2 things: in R you need a double backslash to escape a metacharacter!!
-
-*** =pre_exercise_code
-```{r}
-python.file <- c( "import math",
-                  "class gameObject:",
-                  "    def __init__(self, pos, radius):",
-                  "        self.pos=pos",
-                  "        self.radius=radius",
-
-                  "def distance(Coord_1,Coord_2):",
-                  '    if len(Coord_1) != len(Coord_2)',
-                  '        return "The length of the vectors is not equal"',
-                  "    else:",
-                  "        l=[(Coord_1[i]-Coord_2[i])**2 for i in range(len(Coord_1))]",
-                  
-                  "        return math.sqrt(sum(l))",
-                  "def collisions(x,y):",
-                  "    Coord_x = x.pos",
-                  "    Coord_y = y.pos",
-                  "    impact = x.radius + y.radius",
-                  '    if distance(Coord_x, Coord_y) <= impact:',
-                  '    return "boom"' ) 
-write.table(python.file, "python file.py",quote=F, col.names=F, row.names=F, sep="\n")
-rm(python.file)
-```
-*** =sample_code
-```{r}
-# I have uploaded a file called ""python file.py
-# You can see its contents in R uncommenting the lines below
-# python.file <- readLines("python file.py")
-# python.file
-
-```
-
-*** =solution
-```{r}
-# I have uploaded a file called ""python file.py
-# You can see its contents in R uncommenting the lines below
-# python.file <- readLines("python file.py")
-# python.file
-
-```
-
-*** =sct
-```{r}
-test_error()
-test_object("python.file")
-
 ```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
