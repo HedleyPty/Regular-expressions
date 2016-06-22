@@ -252,9 +252,10 @@ The pair of parenthesis has **no meaning** in isolation. They have a special mea
 
 *** =instructions
 - (a
-- \\(\\a\\)
+- \((a\)
 - (a) 
 - a)
+
 *** =hint
 Remember what you have learned about the escape metacharacter?
 
