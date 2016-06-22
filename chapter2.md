@@ -252,26 +252,11 @@ The pair of parenthesis has **no meaning** in isolation. They have a special mea
 
 *** =instructions
 - (a
-- \\(a\\)
+- \\(\\a\\)
 - (a) 
 - a)
 *** =hint
 Remember what you have learned about the escape metacharacter?
-*** =sct
-```{r}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# testwhat R package
-
-msg_bad_1 <- "This is an invalid regex! it lead to a runtime error"
-msg_bad_2 <- "That regex matches the string "a", not (a)'
-msg_success <- "Exactly! the pair of paranthesis need to be escaped!"
-
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(correct = 2, feedback_msgs = c(msg_bad_1, msg_success, msg_bad_2,msg_bad_1)) 
-```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b6764ff
 ##The alternation (|)
