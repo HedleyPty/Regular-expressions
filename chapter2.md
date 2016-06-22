@@ -248,17 +248,26 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_ba
 ##Parentheses ()
 
 The pair of parenthesis has **no meaning** in isolation. They have a special meaning, but we discuss that in another exercise.
-**Which of the following regex contains match the string "(a)"?**
+**Which of the following regex contains match the string "(a)"?** Use the R sintaxis 
 
 *** =instructions
 - (a
-- \\(a\\)
+- \\\\(a\\\\)
 - (a) 
 - a)
 
 *** =hint
 Remember what you have learned about the escape metacharacter?
+```{r}
+#
+msg_bad_1 <- "`class` makes no sense in this context"
+msg_bad_2 <- "`.` is a wildcard, it matches with anything"
+msg_bad_3 <- "`\\` in R is not the metacharacter for escape"
+msg_success <- "Exactly! This is correct!"
 
+
+test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_bad_3 )) 
+```
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b6764ff
 ##The alternation (|)
 
