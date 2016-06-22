@@ -1,4 +1,7 @@
 ---
+output: word_document
+---
+---
 title       : Metacharacters I
 description : In this chapter I will teach you about metacharacters
 attachments :
@@ -242,37 +245,38 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_ba
 ```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d507f6f0e
-##Regular expressions jargon!
+##Parentheses ()
 
-Regulars expressions have 2 main components. The *literals* and the *metacharacters*. The literals are any *number*, *alphabetic* or **some** *signs* that have no other meaning than themselves. *1* means *1*, *a* means *a*, *,* means *,*. The *spaces*, *tabulation*, *line breaks* all of them are *literals*. The metacharacters have a special meaning, and we discuss them later. They are always: *.  \  ^  $  ?  +  ( )  [ ]  { }*. This ones can change according to the context: *, -*
-**Which of the following regex contains at least a metacharacter?**
+The pair of parenthesis has **no meaning** in isolation. They have a special meaning, but we discuss that in another exercise.
+**Which of the following regex contains match the string "(a)"?**
 
 *** =instructions
-- Hello, my name is Peter Parker!
-- What is your name?
-- I don't have time for your foolishness: 
-- Be my guest!
+- /(a/
+- /\\(a\\)/
+- (a) 
+- /a)/
 *** =hint
-Have a look at heading of this exercise and observe that it refers to a specific file in this list?
+Remember what you have learned about the escape metacharacter?
 *** =sct
 ```{r}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # testwhat R package
 
-msg_bad <- "There is no metacharacter in this regex"
-msg_success <- "Exactly! the question mark ? is a metacharacter"
+msg_bad_1 <- "This is an invalid regex! it lead to a runtime error"
+msg_bad_2 <- "That regex matches the string "a", not (a)'
+msg_success <- "Exactly! the pair of paranthesis need to be escaped!"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad,msg_bad)) 
+test_mc(correct = 2, feedback_msgs = c(msg_bad_1, msg_success, msg_bad_2,msg_bad_1)) 
 ```
 
 --- type:NormalExercise lang:r xp:50 skills:1 key:452b6764ff
-##Using literals
+##The alternation (|)
 
-In a previous exercise we learned the *literal*. In R, the function `grep` must have at least 2 arguments, the first one is a *regular expression* or *regex* and the second one is a test character vector. It returns a numeric vector of the indices of the original vector, where the regex match the string
+In a previous exercise we learned the *a set of parenthesis in isolation are meaningless*. The **alternation** represent a list of posibilities separated |
 
 *** =instructions
 - The environment is populated with a character vector `titles`
