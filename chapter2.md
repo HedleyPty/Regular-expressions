@@ -248,7 +248,7 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_ba
 ##Parentheses ()
 
 The pair of parenthesis has **no meaning** in isolation. They have a special meaning, but we discuss that in future exercises. 
-**Which of the following regex does match the string "(a)"?** Use the R sintaxis 
+**Which of the following regex does match the string "(a)"?**  Use the R sintaxis 
 *** =pre_exercise_code
 ```{r}
 
@@ -297,35 +297,30 @@ rm(movies)
 
 #The environment is populated with the vector `titles`
 
-#Replace ____ below with the proper regular expression 
-#in order to find out how many movies has the word "Time" in their title
+#Complete ____ the regular expression below 
+#in order to find out how many movies has either the word "Time" or the word "World" in their title
 #Don't change anything else!
-regex <- "____"
+regex <- "(Time____"
 length(grep(regex, titles,value=T))
 
 ```
 
 *** =solution
 ```{r}
+
 #The environment is populated with the vector `titles`
 
-#Replace ____ below with the proper regular expression
-#in order to find out how many movies are the word "Time" in their title
+#Complete ____ the regular expression below 
+#in order to find out how many movies has either the word "Time" or the word "World" in their title
 #Don't change anything else!
-regex <- "Time"
+regex <- "(Time|World)"
 length(grep(regex, titles,value=T))
 
 ```
 
 *** =sct
 ```{r}
-regex.sln<-function(r){
-if (regex==r)  {
+test_error()
+test_object("regex")
 success_msg("Good work!")
-}else{
-err_msg <- paste('The regex `', regex, '` is incorrect', sep="")
-test_an_object("regex", undefined_msg = err_msg)
-}}
-regex.sln("Time")
-
 ```
