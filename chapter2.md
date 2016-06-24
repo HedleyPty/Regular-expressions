@@ -249,7 +249,10 @@ test_mc(correct = 3, feedback_msgs = c(msg_bad_1, msg_bad_2, msg_success, msg_ba
 
 The pair of parenthesis has **no meaning** in isolation. They have a special meaning, but we discuss that in another exercise.
 **Which of the following regex contains match the string "(a)"?** Use the R sintaxis 
+*** =pre_exercise_code
+```{r}
 
+```
 *** =instructions
 - (a
 - \\\\(a\\\\)
