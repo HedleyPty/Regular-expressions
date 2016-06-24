@@ -261,8 +261,8 @@ The pair of parenthesis has **no meaning** in isolation. They have a special mea
 
 *** =hint
 Remember what you have learned about the escape metacharacter?
+*** = sct
 ```{r}
-#
 msg_bad_1 <- "`class` makes no sense in this context"
 msg_bad_2 <- "`.` is a wildcard, it matches with anything"
 msg_bad_3 <- "`\\` in R is not the metacharacter for escape"
